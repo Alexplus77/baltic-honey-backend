@@ -9,9 +9,10 @@ exports.removeUploadMedia = (req, res) => {
     ImageModel.findOneAndRemove({ name: name }, {}, (err, doc) => {
       if (err) throw err;
       fs.unlink(`uploadMedia/${name}`, (err) => {
-        if (err) throw err;
+        if (err) throw "Файл не найден";
       });
       ImageModel.find({}, (error, result) => {
+        if (error) throw "В базе данных такого изображения нет";
         res.send(result);
       });
     });
