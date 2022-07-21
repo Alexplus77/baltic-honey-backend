@@ -5,21 +5,28 @@
 
 <head>
     <style>
-        .body{
-            width: 100%;
-            height: 400px;
-            background-color: #bfbff7;
+        body{
+            background-color: #8cc8ff;
+            width: fit-content;
+            min-height: fit-content;
         }
-        .h1{
-            text-align: center;
-            color: red;
+        table {
+            width:100%;
         }
-        .h2{
-            text-align: center;
+        tbody {
+            width:100%;
         }
-        .dataUser{
-            position: absolute;
-            margin-left: 15%;
+        tr {
+            width:fit-content;
+            display: grid;
+            gap: 10px;
+            grid-auto-flow: column;
+        }
+        td{
+            display: grid;
+            gap: 10px;
+            height: fit-content;
+
         }
 
     </style>
@@ -32,18 +39,17 @@
 <table>
     <tbody>
     <tr>
-        <th>
+        <td>
+            <!--            ../avatars/2980.jpg-->
             <img width="150px" src="<%=  userAvatar%>">
-        </th>
-        <th>
-            <h3>Ваши регистрационные данные</h3>
+        </td>
+        <td>
+            <strong>Ваши регистрационные данные</strong>
             <span>Логин: <%= userEmail%></span>
-            <br>
             <span>Пароль: <%= userPassword%></span>
-        </th>
+        </td>
 
     </tr>
-
     </tbody>
 </table>
 <div >
