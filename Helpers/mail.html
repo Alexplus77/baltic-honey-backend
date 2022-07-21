@@ -5,54 +5,42 @@
 
 <head>
     <style>
-        body{
+        .body{
             background-color: #8cc8ff;
-            width: fit-content;
+            width: 70%;
+            padding: 20px;
             min-height: fit-content;
         }
-        table {
-            width:100%;
-        }
-        tbody {
-            width:100%;
-        }
-        tr {
-            width:fit-content;
-            display: grid;
-            gap: 10px;
-            grid-auto-flow: column;
-        }
         td{
-            display: grid;
-            gap: 10px;
-            height: fit-content;
-
+            width: 250px;
         }
 
     </style>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body class="body">
-<h1 class="h1">Поздравляем!!!</h1>
-<h2 class="h2">Вы зарегестрировались на сайте "Балтийский мёд"</h2>
-<table>
-    <tbody>
-    <tr>
-        <td>
-            <!--            ../avatars/2980.jpg-->
-            <img width="150px" src="<%=  userAvatar%>">
-        </td>
-        <td>
-            <strong>Ваши регистрационные данные</strong>
-            <span>Логин: <%= userEmail%></span>
-            <span>Пароль: <%= userPassword%></span>
-        </td>
+<body >
+<div class="body">
+    <h1 class="h1">Поздравляем!!!</h1>
+    <h2 class="h2">Вы зарегестрировались на сайте "Балтийский мёд"</h2>
+    <table>
+        <tbody>
+        <tr>
+            <td>
+                <!--            ../avatars/2980.jpg-->
+                <img width="150px" src="<%=  userAvatar%>">
+            </td>
+            <td>
 
-    </tr>
-    </tbody>
-</table>
-<div >
+                <strong >Ваши регистрационные данные</strong>
+                <span >Логин: <%= userEmail%></span>
+                <br>
+                <span >Пароль: <%= userPassword%></span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
 
 
     <!--    <span class="linkAvatar"><%=  userAvatar%></span>-->
