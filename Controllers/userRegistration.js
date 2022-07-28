@@ -1,6 +1,6 @@
 const bcrypt = require("bcryptjs");
 const UserModel = require("../Models/userModel");
-const { mailSend } = require("../Helpers/mailSend");
+const { mailSend } = require("../MailSendler/mailSend");
 exports.userRegistration = async (req, res) => {
   try {
     const user = await UserModel.findOne({ email: req.body.email });
@@ -10,7 +10,7 @@ exports.userRegistration = async (req, res) => {
     new UserModel({ ...req.body, password: hash, role: "user" }).save((error) =>
       console.log(error)
     );
-    await mailSend(req.body);
+    await mailSend(req.body, "./mail.html");
   } catch (e) {
     console.log(e);
     res.status(409).send({ message: e });
