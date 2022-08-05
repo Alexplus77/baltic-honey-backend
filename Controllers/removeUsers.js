@@ -12,7 +12,7 @@ exports.removeUsers = async (req, res) => {
       "email",
       "role",
       "avatar",
-      "agreeMailing",
+      "agreementMailing",
     ]);
     res.send(users);
   } catch (e) {
