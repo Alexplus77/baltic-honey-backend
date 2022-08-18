@@ -11,11 +11,7 @@ exports.sendToUserMail = (req, res) => {
         pass: "yeItbPN4Cts1phNkJ619", // generated ethereal password
       },
     });
-
-    if (!req.body.usersList) {
-      return res.status(400).send({ message: "Нет выбранных пользователей" });
-    }
-    req.body.usersList &&
+    req.body.usersList.length &&
       transporter.sendMail(
         {
           from: '"Балтийский мёд" <alexplus77@mail.ru>',
