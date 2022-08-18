@@ -11,18 +11,20 @@ exports.sendToUserMail = (req, res) => {
         pass: "yeItbPN4Cts1phNkJ619", // generated ethereal password
       },
     });
-    transporter.sendMail(
-      {
-        from: '"Балтийский мёд" <alexplus77@mail.ru>',
-        to: req.body.usersList,
-        subject: "Рассылка с сайта 'Балтийский мёд.'",
-        html: req.body.mailText,
-      },
-      (err, info) => {
-        if (err) throw "Ошибка отправки письма.";
-        res.send("ok");
-      }
-    );
+    if (!req.body.usersList) throw "Нет выбранных пользователей";
+    req.body.usersList &&
+      transporter.sendMail(
+        {
+          from: '"Балтийский мёд" <alexplus77@mail.ru>',
+          to: req.body.usersList,
+          subject: "Рассылка с сайта 'Балтийский мёд.'",
+          html: req.body.mailText,
+        },
+        (err, info) => {
+          if (err) throw "Ошибка отправки письма.";
+          res.send("ok");
+        }
+      );
   } catch (e) {
     res.status(400).send({ message: e });
     console.log("error from sendToUserMail:", e);
