@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.1426f101.css",
+    "main.css": "/static/css/main.5cc88215.css",
     "main.js": "/static/js/main.95d60800.js",
     "static/js/787.3975329a.chunk.js": "/static/js/787.3975329a.chunk.js",
     "static/media/background-beekeeping.jpg": "/static/media/background-beekeeping.c1f405b0db426ecee285.jpg",
     "static/media/logo.jpg": "/static/media/logo.92da8b3c600489ad20b0.jpg",
     "index.html": "/index.html",
-    "main.1426f101.css.map": "/static/css/main.1426f101.css.map",
+    "main.5cc88215.css.map": "/static/css/main.5cc88215.css.map",
     "main.95d60800.js.map": "/static/js/main.95d60800.js.map",
     "787.3975329a.chunk.js.map": "/static/js/787.3975329a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1426f101.css",
+    "static/css/main.5cc88215.css",
     "static/js/main.95d60800.js"
   ]
 }
