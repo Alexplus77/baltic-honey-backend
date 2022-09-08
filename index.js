@@ -12,6 +12,7 @@ const cors = require("cors");
 
 require("dotenv").config();
 const PORT = process.env.PORT || 8080;
+//База данных на сервере
 const URI = "mongodb://127.0.0.1:27017/baltic-honey";
 
 const URI3 = "mongodb://127.0.0.1/baltic-honey";
