@@ -12,8 +12,7 @@ const cors = require("cors");
 
 require("dotenv").config();
 const PORT = process.env.PORT || 8080;
-const URI =
-  "mongodb://alexsuf:Ab@27021986@127.0.0.1:27017/admin?retryWrites=true&w=majority";
+const URI = "mongodb://127.0.0.1:27017/baltic-honey";
 
 const URI3 = "mongodb://127.0.0.1/baltic-honey";
 const URI2 =
